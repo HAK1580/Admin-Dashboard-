@@ -7,9 +7,9 @@ const Layout = () => {
   return (
     <div>
         <Navbar />
-    <div className="flex  gap-12 ">
+    <div className="flex  gap-6 ">
         <Sidebar />
-        <div className="main mt-6">
+        <div className="main mt-6 overflow-auto   sm:fixed left-35 top-16 max-h-screen w-full sm:w-[92%] ">
         <Outlet />
 
         </div>
@@ -23,3 +23,4 @@ const Layout = () => {
 }
 
 export default Layout
+

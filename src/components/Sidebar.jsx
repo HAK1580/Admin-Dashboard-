@@ -12,14 +12,14 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="bg-white border border-gray-400 text-black hidden sm:block min-h-[87vh]">
+    <div className="bg-white border fixed top-22  border-gray-400 text-black hidden sm:block min-h-[87vh]">
       <div className="sidebar">
         <ul className="flex flex-col gap-8">
 
           {items.map(item => (
             <li
               key={item.path}
-              className={`py-5 px-7 cursor-pointer 
+              className={`py-5 px-5 md:px-7 cursor-pointer 
                 ${
                   location.pathname === item.path
                     ? "bg-black text-white"
