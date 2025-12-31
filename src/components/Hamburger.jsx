@@ -19,7 +19,7 @@ const Hamburger = () => {
           {items.map(item => (
             <li
               key={item.path}
-              className={`py-5 px-6 md:px-7 cursor-pointer 
+              className={`flex p-5 justify-center items-center  md:px-7 cursor-pointer 
                 ${
                   location.pathname === item.path
                     ? "bg-black text-white"
