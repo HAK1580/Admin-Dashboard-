@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className="nav sm:hidden  flex   justify-between items-center p-1 ">
         <img onClick={()=>setHamopen(!hamopen)}  className={`w-8 ham ${hamopen?"hidden":""} `} src={`${toggle?"black-hamburger.svg":"hamburger.svg"} `  } alt="" />
         <img onClick={()=>setHamopen(!hamopen)}  className={`w-6 ham ${hamopen?"":"hidden"} `} src={`${toggle?"cross.svg":"white-cross.svg"}`} alt="" />
-       <a href=""> <img className=' w-13  sm:w-16' src="round-pic.webp" alt="" />    </a>
+       <a href="/"> <img className=' w-13  sm:w-16' src="round-pic.webp" alt="" />    </a>
        
         <div className="right-icons flex gap-4">
         <img onClick={()=>setToggle(!toggle)} className='w-7' src={`${toggle?"dark.svg":"light.svg"}`}  alt="" />
