@@ -31,7 +31,7 @@ const Analytics = () => {
         <h1 className="text-lg text-green-500 text-center">YOUR CONTENT HERE </h1>
  Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita autem ratione aliquam voluptas reprehenderit maiores. Expedita nemo nulla voluptatibus explicabo in quidem sit labore id amet consequuntur voluptas, similique laborum asperiores nihil quisquam neque assumenda fugit ducimus animi? Eos molestiae ad ab est atque optio consequuntur quis voluptatem iure? Quam!
        </div>
-       <div className="chart h-60  bg-gray-200">
+       <div className="chart h-60 m-10 bg-gray-200">
        <Line data={data} options={options    } />
 
        </div>

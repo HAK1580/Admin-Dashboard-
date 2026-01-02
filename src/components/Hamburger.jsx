@@ -4,22 +4,23 @@ const Hamburger = () => {
 
   const location = useLocation();
 
-  const items = [
-    { name: "Dashboard", path: "/" },
-    { name: "Reports", path: "/reports" },
-    { name: "Analytics", path: "/analytics" },
-    { name: "Settings", path: "/settings" },
+ const items = [
+    { name: "Dashboard", path: "/",icon:"dashboard.svg",white_icon:"white-dashboard.svg" },
+    { name: "Reports", path: "/reports",icon:"reports.svg",white_icon:"white-reports.svg"  },
+    { name: "Analytics", path: "/analytics",icon:"analytics.svg",white_icon:"white-analytics.svg"  },
+    { name: "Settings", path: "/settings",icon:"settings.svg",white_icon:"white-settings.svg" },
   ];
 
 
+
   return (
-    <div className='fixed text-black w-[30%] left-0 bg-white h-screen ' > 
+    <div className='fixed text-black w-[32%] left-0 bg-white h-screen ' > 
   <ul className="flex flex-col gap-8">
 
           {items.map(item => (
             <li
               key={item.path}
-              className={`flex p-5 justify-center items-center  md:px-7 cursor-pointer 
+              className={`flex p-5 gap-2  justify-center items-center  md:px-7 cursor-pointer 
                 ${
                   location.pathname === item.path
                     ? "bg-black text-white"
@@ -28,6 +29,8 @@ const Hamburger = () => {
               `}
             >
               <Link to={item.path}>{item.name}</Link>
+              <img className="w-5" src={`${(location.pathname === item.path)?item.white_icon:item.icon}`} alt="" />
+
             </li>
           ))}
 
