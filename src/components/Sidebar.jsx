@@ -12,7 +12,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div className="bg-white border fixed top-22 lg:top-21  border-gray-400 text-black hidden sm:block min-h-[87vh]">
+    <div className="bg-white border lg:-mx-4 fixed top-22 lg:top-21  border-gray-800 text-black hidden sm:block min-h-[87vh]">
       <div className="sidebar">
         <ul className="flex flex-col gap-8">
 
