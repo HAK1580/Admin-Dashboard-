@@ -1,12 +1,32 @@
 import React from 'react'
-
+import { Pie,Bar} from 'react-chartjs-2'
+import "chart.js/auto"
+import { data } from 'react-router-dom'
 const Reports = () => {
+
+  const piedata={
+    labels:["mobile","tablets","Pc/Laptops"],
+    datasets:[
+      {data:[200,150,50],}
+    ]
+  }
+const bardata={
+  labels:["sales","profit","loss","margin"],
+  datasets:[
+   {data:[150,20,220,350]}
+  ]
+}
+
   return (
     <div className='sm:w-[85%] h-screen lg:w-[95%]' >
       <h1 className='text-3xl px-6 sm:py-5  lg:hidden ' >Reports  </h1>
             <div className="add-content-here p-4">
-        <h1 className="text-lg text-blue-500 text-center">YOUR CONTENT HERE </h1>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit natus perspiciatis reprehenderit laborum. Assumenda voluptatum odio, blanditiis mollitia, maiores molestias reprehenderit error ratione debitis, praesentium beatae ut! Accusamus beatae, nostrum dolorum quidem vitae numquam ab dolorem adipisci? Expedita eaque dolor neque corporis sint accusamus nobis laboriosam provident laudantium alias id necessitatibus consequuntur recusandae, ipsum dolore minima, ullam aspernatur reiciendis. Eveniet sunt esse corporis aspernatur repellat excepturi itaque saepe ea et amet reiciendis animi, doloremque minus repudiandae incidunt quis dolorum vel inventore molestiae! Commodi velit quidem ratione! Voluptas, illum placeat dicta atque sequi numquam tenetur beatae molestiae ducimus nam consequatur quae.
+              <div className="chart my-6 rounded p-2   h-65">
+               <Pie data={piedata} />
+              </div>
+              <div className="chart my-14 bg-gray-200 rounded    h-65">
+               <Bar data={bardata} />
+              </div>
       </div>
     </div>
   )

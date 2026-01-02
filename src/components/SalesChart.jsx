@@ -33,7 +33,7 @@ const SalesChart = () => {
     <div className="p-4 border rounded-lg bg-white">
 
       {/* chart wrapper controls size */}
-      <div className="h-64 w-full">
+      <div className="h-74 w-full">
         <Line data={data} options={options} />
       </div>
       
