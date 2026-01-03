@@ -8,6 +8,7 @@ const Navbar = () => {
     const [notify,setNotify]=useState(false)
     const [toggle,setToggle]=useState(false);
     const [hamopen,setHamopen]=useState(false);
+   
     useEffect(() => {
 
   document.body.style.backgroundColor=`${toggle?"white":"black"}`
@@ -33,8 +34,16 @@ const Navbar = () => {
    
 
  }, [hamopen])
+useEffect(()=>{
+document.body.addEventListener("keydown",(e)=>{
+    if(e.key==="Escape"){
+    setNotify(false);
+    setHamopen(false);
+    }
+})
 
 
+},[notify,hamopen])
 
  
 
@@ -61,8 +70,8 @@ const Navbar = () => {
         <img className='w-16' src="round-pic.webp" alt="" />
         </div>
     <div className="right-icons flex items-center gap-4   ">
-        <img onClick={()=>setToggle(!toggle)} className='w-8' src={`${toggle?"dark.svg":"light.svg"}`} alt="" />
-        <img onClick={()=>setNotify(!notify)}  className='w-8 ' src={`${toggle?"black-bell.svg":"bell.svg"}`} alt="" />
+        <img onClick={()=>setToggle(!toggle)} className='w-8 cursor-pointer' src={`${toggle?"dark.svg":"light.svg"}`} alt="" />
+        <img onClick={()=>setNotify(!notify)}  className='w-8 cursor-pointer ' src={`${toggle?"black-bell.svg":"bell.svg"}`} alt="" />
     </div>
         </div>
 

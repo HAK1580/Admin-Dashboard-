@@ -39,7 +39,7 @@ const Notification = ({toggle,setToggle}) => {
       return (
         
     <div className="img-box  flex gap-2 items-center ">
-      <img className='w-16' src={`${item.img}`} alt="" />
+      <img  className='w-16' src={`${item.img}`} alt="" />
       <div className="chat-texts">
         <h1>{item.title}</h1>
         <h1 className='text-gray-500' >{item.sub_title}</h1>
