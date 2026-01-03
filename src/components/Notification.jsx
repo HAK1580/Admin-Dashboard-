@@ -27,7 +27,7 @@ const Notification = ({toggle,setToggle}) => {
 
   return (
  <div>
-  <div className={`${toggle?"bg-gray-800  text-white ":"bg-gray-200 text-black"} z-100  notification-box  fixed right-0 min-w-70 rounded-xl  min-h-90`}>
+  <div className={`${toggle?"bg-gray-800  text-white ":"bg-gray-200 text-black"} z-100  notification-box  fixed right-0 min-w-65 rounded-xl  min-h-90`}>
   <div className={`notification-header  w-[90%] mx-auto p-1 flex items-center justify-between  my-4  `}>
     <h1 className='text-xl'>Notifications </h1>
     <div className="new-msgs bg-blue-500 rounded px-2  text-white">
