@@ -34,7 +34,7 @@ const Notification = ({toggle,setToggle}) => {
       5 new
     </div>
   </div>
-  <div className="chats-box mb-2 p-2  flex flex-col gap-4">
+  <div className="chats-box mb-1 p-2  flex flex-col gap-4">
     {data.map((item)=>{
       return (
         
@@ -50,7 +50,7 @@ const Notification = ({toggle,setToggle}) => {
       )
     })}
       <div className="btn flex justify-center mt-5 items-center">
-        <button className='bg-blue-400 px-8 rounded py-1 border text-white' >See all Notifications</button>
+        <button className={`bg-blue-400 px-8 rounded py-1 border ${toggle?"":"border-gray-500"} text-white`} >See all Notifications</button>
       </div>
     </div>  
 
